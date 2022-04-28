@@ -1,0 +1,27 @@
+{
+  "title": "Willkommen zu react und react-i18next",
+  "menu": {
+    "part1": "HOME",
+    "part2": "SHOP",
+    "part3": "COLLECTIONS",
+    "part4": "ABOUT US",
+    "part5": "BLOG"
+  },
+  "header": {
+    "1": "Create account",
+    "2": "My Cart"
+  },
+  "header_bottom": {
+    "1": "COLLECTIONS",
+    "2": "YOUR SHOPPING CART"
+  },
+  "footer": {
+    "1": "Quick Links",
+    "2": "Latest Posts",
+    "3": "Featured posts",
+    "4": "We are @"
+  },
+  "cart": {
+    "1": "Add to Cart"
+  }
+}

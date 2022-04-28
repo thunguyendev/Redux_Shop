@@ -1,0 +1,27 @@
+{
+  "title": "Willkommen zu react und react-i18next",
+  "menu": {
+    "part1": "Trang chủ",
+    "part2": "Cửa hàng",
+    "part3": "Bộ sưu tập",
+    "part4": "Về chúng tôi",
+    "part5": "Tâm sự"
+  },
+  "header": {
+    "1": "Tạo tài khoản",
+    "2": "Giỏ hàng"
+  },
+  "header_bottom": {
+    "1": "Bộ sưu tập",
+    "2": "Giỏ hàng của bạn"
+  },
+  "footer": {
+    "1": "Truy cập nhanh",
+    "2": "Bài viết gần đây",
+    "3": "Bài viết đặc sắc",
+    "4": "Liên hệ @"
+  },
+  "cart": {
+    "1": "Thêm vào giỏ hàng"
+  }
+}
