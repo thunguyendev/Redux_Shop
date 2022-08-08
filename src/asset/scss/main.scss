@@ -1,0 +1,8 @@
+@import "./layouts/all";
+@import "./common/all";
+@import './abstracts/all';
+
+*body {
+  font-family: $font-body;
+  background-color: $body-bg-color;
+}

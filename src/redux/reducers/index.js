@@ -5,7 +5,7 @@ import {
   INCREASE_QUANTITY,
   DECREASE_QUANTITY,
 } from "../constants/action-types";
-import Cart from "../../utils/Cart";
+import Cart from "../../utils/cart";
 
 const initialState = {
   cart: localStorage.getItem("cart") ? Cart.get() : [],

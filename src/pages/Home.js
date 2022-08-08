@@ -12,7 +12,9 @@ const Home = () => {
   const { t, i18n } = useTranslation();
   return (
     <>
+      
       <Header />
+  
       <Line height={4} color={" #ebebeb"} />
       <Navbar />
       <HeaderBottom title={t("header_bottom.1")}/>

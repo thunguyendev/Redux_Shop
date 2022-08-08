@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./sass/main.scss";
-// import './index.scss'
+import "./asset/scss/main.scss";
 import App from "./App";
 import { Suspense } from "react";
 import reportWebVitals from "./reportWebVitals";

@@ -1,49 +1,24 @@
 import React from "react";
+import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/actions";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from 'react';
 
 const ProductCard = () => {
   const { t, i18n } = useTranslation();
 
-  const items = [
-    {
-      id: 1,
-      name: "Baby T-shirt",
-      img: "https://cdn.shopify.com/s/files/1/0652/0011/products/product5_d27ec808-2521-447e-b028-0cd2506cf3a4_600x.jpg?v=1411365432",
+  const [items, setItems] = useState([]);
 
-      price: "$1200",
-      quantity: 3,
-    },
-    {
-      id: 2,
-      name: "Cotton dress",
-      img: "https://cdn.shopify.com/s/files/1/0652/0011/products/product10_2c05f4f5-f116-4c05-b2ff-f6bfea3e63ee_600x.png?v=1411365494",
-      price: "$500",
-      quantity: 5,
-    },
-    {
-      id: 3,
-      name: "Red dress",
-      img: "https://cdn.shopify.com/s/files/1/0652/0011/products/test2_600x.png?v=1414230111https://cdn.shopify.com/s/files/1/0652/0011/products/test2_600x.png?v=1414230111",
-      price: "$200",
-      quantity: 13,
-    },
-    {
-      id: 4,
-      name: "Trousers",
-      img: "https://cdn.shopify.com/s/files/1/0652/0011/products/product13_9244ed59-7483-4894-bbaf-a46478c7b2ec_600x.png?v=1411365110",
-      price: "$900",
-      quantity: 1,
-    },
-    {
-      id: 5,
-      name: "Trousers",
-      img: "https://cdn.shopify.com/s/files/1/0652/0011/products/product13_9244ed59-7483-4894-bbaf-a46478c7b2ec_600x.png?v=1411365110",
-      price: "$900",
-      quantity: 3,
-    },
-  ];
+  useEffect(()=>{
+      fetchProducts() 
+  },[])
+
+  const fetchProducts = async () => {
+      await axios.get(`http://localhost:8000/api/products`).then(({data})=>{
+      setItems(data)
+      })
+  }
 
   const dispatch = useDispatch();
   const addProduct = (params) => {
@@ -61,7 +36,7 @@ const ProductCard = () => {
               key={id}
               className="product-img"
               alt="product-img"
-              src={item.img}
+              src={`http://localhost:8000/storage/images/${item.image}`}
               height={200}
             />
 
